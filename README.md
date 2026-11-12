@@ -1,70 +1,80 @@
-# C Custom Preprocessor
+# Student Record Management System
 
-## About
+## About the Project
 
-This project is a basic implementation of a C preprocessor using C programming. It takes a C source file as input and generates a processed file with a `.i` extension.
+This project is a Student Record Management System developed using C programming. It helps manage student information through a menu-driven application.
 
-It performs three main operations: comment removal, header file inclusion, and macro substitution.
+The program uses a singly linked list to store student records. It also supports adding, deleting, modifying, displaying, sorting, and reversing records.
+
+Student details can be saved in a file and loaded again when the program starts.
 
 ## Features
 
-- Removes single-line and multi-line comments.
-- Handles header file inclusion.
-- Stores and replaces defined macros.
-- Generates a processed `.i` output file.
+- Add new student records.
+- Delete records using roll number or name.
+- Display all student records.
+- Modify student details.
+- Sort records alphabetically by name.
+- Sort records by percentage in descending order.
+- Reverse the student linked list.
+- Delete all student records.
+- Save and load records using file handling.
+
+## Technologies Used
+
+- C Programming
+- GCC Compiler
+- Singly Linked List
+- Dynamic Memory Allocation
+- File Handling
 
 ## Project Files
 
-- `main.c` – Main program and file handling.
-- `header.c` – Handles header file inclusion.
-- `comment.c` – Removes comments from the source file.
-- `macro.c` – Handles macro definitions and replacement.
-- `header.h` – Contains function declarations and header files.
-- `Makefile` – Used to compile the program.
+| File | Description |
+|---|---|
+| main.c | Main function and menu operations |
+| header.h | Structure definition and function declarations |
+| addstudentdata.c | Adds new student records |
+| deletenode.c | Deletes a selected student record |
+| deleteall.c | Deletes all student records |
+| printdata.c | Displays student records |
+| modifydata.c | Modifies existing records |
+| sortdata.c | Sorts student records |
+| savedata.c | Saves and loads student data |
+| revnode.c | Reverses the linked list |
+| Makefile | Compiles the project |
 
 ## Compilation
 
-Compile the program using:
+Compile the source files using GCC:
 
 ```bash
-make
+gcc main.c addstudentdata.c deletenode.c deleteall.c printdata.c modifydata.c sortdata.c savedata.c revnode.c -o student
 ```
 
 ## Execution
 
-Run the executable by providing a C source file:
+Run the program:
 
 ```bash
-./exe inputfile.c
+./student
 ```
 
-Example:
+## Data Storage
 
-```bash
-./exe sample.c
-```
-
-The processed output will be generated as:
-
-```text
-sample.i
-```
-
-## Requirements
-
-- GCC Compiler
-- Linux Environment
-- Make utility
+The program uses `student.dat` to store student records. Saved records can be loaded when the application starts.
 
 ## Concepts Used
 
-- C Programming
-- File Handling
+- Structures
 - Pointers
+- Functions
+- Singly Linked Lists
 - Dynamic Memory Allocation
-- String Manipulation
-- Modular Programming
+- Searching and Sorting
+- File Operations
+- Memory Management
 
-## Author
+## Objective
 
-**Harish Rayineri**
+The objective of this project is to understand linked list operations, pointers, dynamic memory allocation, and file handling through a practical C programming application.
